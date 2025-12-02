@@ -115,11 +115,11 @@ export default function Footer() {
             <div className="mt-4">
               <div className="d-flex align-items-center mb-2">
                 <i className="fas fa-envelope text-warning me-3"></i>
-                <span className="text-light opacity-75">support@bibrafx.com</span>
+                <span className="text-light opacity-75">bibrafx@gmail.com</span>
               </div>
               <div className="d-flex align-items-center mb-2">
                 <i className="fas fa-phone text-warning me-3"></i>
-                <span className="text-light opacity-75">+1 (555) 123-4567</span>
+                <span className="text-light opacity-75">+250 795564155</span>
               </div>
               <div className="d-flex align-items-center">
                 <i className="fas fa-map-marker-alt text-warning me-3"></i>
