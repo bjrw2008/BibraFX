@@ -1,104 +1,136 @@
-'use client';
-import Link from 'next/link';
-
 export default function AboutPage() {
   return (
-    <div className="min-vh-100 bg-light pt-5">
-      <div className="container mt-5 py-5">
-        <nav aria-label="breadcrumb" className="mb-4">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item">
-              <Link href="/" className="text-decoration-none">
-                <i className="fas fa-home me-1"></i>
-                Home
-              </Link>
-            </li>
-            <li className="breadcrumb-item active" aria-current="page">
-              About Us
-            </li>
-          </ol>
-        </nav>
+    <div className="container py-5">
+      <h1 className="display-5 fw-bold mb-4">About BibraFX</h1>
+      <p className="text-muted">Empowering learners & traders with structured knowledge.</p>
 
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="card shadow-sm border-0">
-              <div className="card-body p-4 p-md-5">
-                <div className="text-center mb-5">
-                  <div className="display-1 mb-3">
-                    <i className="fas fa-chart-line text-primary"></i>
-                  </div>
-                  <h1 className="display-5 fw-bold text-dark mb-3">About BibraFX</h1>
-                  <p className="lead text-muted">
-                    Your Premier Forex Trading Education Platform
-                  </p>
-                </div>
+      {/* INTRODUCTION */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">1. Who We Are</h3>
+        <p>
+          <strong>BibraFX</strong> is an educational platform dedicated to 
+          providing high-quality academic, financial, and forex-related learning materials. 
+          Our mission is to make knowledge simple, organized, and accessible for students, 
+          traders, and self-learners all over the world.
+        </p>
+        <p>
+          We combine modern technology with curated study and trading resources to help 
+          individuals expand their skills, improve decision-making, and understand complex subjects 
+          with clarity and confidence.
+        </p>
+      </section>
 
-                <div className="about-content">
-                  <h3 className="fw-bold text-dark mb-4">Our Mission</h3>
-                  <p className="text-muted mb-4">
-                    At BibraFX, we are dedicated to providing high-quality forex trading education 
-                    to traders of all levels. Our mission is to democratize access to premium trading 
-                    knowledge and help individuals develop the skills needed to succeed in the 
-                    financial markets.
-                  </p>
+      {/* VISION */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">2. Our Vision</h3>
+        <p>
+          Our vision is to become one of the most trusted and user-friendly platforms for 
+          academic and trading education. We aim to provide a space where learning is not 
+          limited by cost, complexity, or accessibility barriers.
+        </p>
+        <p>
+          We believe that quality education should be easy to find, simple to follow, and 
+          available to everyone — no matter their background.
+        </p>
+      </section>
 
-                  <h3 className="fw-bold text-dark mb-4">What We Offer</h3>
-                  <div className="row g-4 mb-4">
-                    <div className="col-md-6">
-                      <div className="d-flex align-items-start">
-                        <div className="feature-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
-                             style={{width: '50px', height: '50px'}}>
-                          <i className="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                          <h5 className="fw-bold text-dark mb-2">Comprehensive Education</h5>
-                          <p className="text-muted mb-0">
-                            From beginner basics to advanced trading strategies
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="col-md-6">
-                      <div className="d-flex align-items-start">
-                        <div className="feature-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
-                             style={{width: '50px', height: '50px'}}>
-                          <i className="fas fa-file-pdf"></i>
-                        </div>
-                        <div>
-                          <h5 className="fw-bold text-dark mb-2">Quality Resources</h5>
-                          <p className="text-muted mb-0">
-                            Curated collection of trading materials and guides
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+      {/* WHAT WE OFFER */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">3. What We Offer</h3>
+        <p>BibraFX provides an expanding library of:</p>
+        <ul>
+          <li>Academic notes for core school and college subjects</li>
+          <li>Forex trading guides for beginners and advanced learners</li>
+          <li>Structured PDF lessons and downloadable materials</li>
+          <li>Books, summaries, and exam-ready study sheets</li>
+          <li>Real-world knowledge explained simply and clearly</li>
+        </ul>
+        <p>
+          Every resource on the platform is created, reviewed, or organized with the goal of 
+          improving user understanding and providing real educational value.
+        </p>
+      </section>
 
-                  <h3 className="fw-bold text-dark mb-4">Our Team</h3>
-                  <p className="text-muted mb-4">
-                    Our team consists of experienced traders, financial educators, and technology 
-                    experts who are passionate about sharing their knowledge. We combine practical 
-                    trading experience with modern educational approaches to create effective 
-                    learning resources.
-                  </p>
+      {/* WHY WE BUILT IT */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">4. Why We Built BibraFX</h3>
+        <p>
+          Too many learners struggle to find reliable, well-structured, and simplified 
+          educational content. At the same time, new traders face overwhelming information 
+          without guidance or proper fundamentals.
+        </p>
+        <p>
+          BibraFX was created to solve these problems by offering:
+        </p>
+        <ul>
+          <li>Clear explanations instead of complex wording</li>
+          <li>Organized materials instead of scattered files</li>
+          <li>Accurate resources instead of misleading content</li>
+          <li>Accessible and affordable learning for all</li>
+        </ul>
+      </section>
 
-                  <div className="cta-section text-center mt-5 pt-4 border-top">
-                    <h4 className="fw-bold text-dark mb-3">Start Your Trading Journey</h4>
-                    <p className="text-muted mb-4">
-                      Join thousands of successful traders who have transformed their skills with BibraFX
-                    </p>
-                    <Link href="/forex-trading" className="btn btn-primary btn-lg px-5">
-                      <i className="fas fa-rocket me-2"></i>
-                      Explore Learning Materials
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* OUR VALUES */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">5. Our Core Values</h3>
+        <p>
+          Everything we build is shaped by values that ensure quality, trust, 
+          and long-term reliability:
+        </p>
+        <ul>
+          <li><strong>Accuracy</strong> — verified, evidence-based, and clear content.</li>
+          <li><strong>Accessibility</strong> — resources designed for every level of learner.</li>
+          <li><strong>Transparency</strong> — no hidden practices, no misleading information.</li>
+          <li><strong>Innovation</strong> — constant platform improvement and better learning tools.</li>
+          <li><strong>Integrity</strong> — honest educational guidance and trustworthy materials.</li>
+        </ul>
+      </section>
+
+      {/* HOW WE OPERATE */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">6. How BibraFX Works</h3>
+        <p>
+          The platform is built using modern technologies that ensure speed, reliability, 
+          and smooth access to learning materials. Our system:
+        </p>
+        <ul>
+          <li>Organizes content by subjects and difficulty levels</li>
+          <li>Uses clean PDF viewers for reading without distractions</li>
+          <li>Loads content fast with pre-optimization and caching</li>
+          <li>Offers mobile-friendly UI for studying anywhere</li>
+          <li>Expands regularly with new educational materials</li>
+        </ul>
+      </section>
+
+      {/* FUTURE GOALS */}
+      <section className="mb-5">
+        <h3 className="fw-semibold mb-3">7. Our Future Goals</h3>
+        <p>We’re committed to continuous growth. Upcoming expansions include:</p>
+        <ul>
+          <li>Interactive quizzes for self-testing</li>
+          <li>Video lessons and visual explanations</li>
+          <li>Community-driven learning rooms</li>
+          <li>Advanced forex trading simulations</li>
+          <li>More subjects, more notes, and deeper content</li>
+        </ul>
+        <p>
+          As we improve the platform, we remain dedicated to helping you learn 
+          better, faster, and more effectively.
+        </p>
+      </section>
+
+      {/* CONTACT */}
+      <section>
+        <h3 className="fw-semibold mb-3">8. Contact Us</h3>
+        <p>
+          Have questions, suggestions, or collaboration offers?<br />
+          We’d love to hear from you.
+        </p>
+        <p>
+          Email us anytime at:{" "}
+          <strong>support@bibrafx.com</strong>
+        </p>
+      </section>
     </div>
   );
 }
