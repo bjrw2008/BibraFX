@@ -394,3 +394,79 @@ footer {
     margin-bottom: 1rem;
   }
 }
+/* Document Card Styling */
+
+.doc-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 380px;               /* Fixed card height */
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Thumbnail Container */
+.doc-thumb {
+  height: 160px;               /* Fixed thumbnail height */
+  width: 100%;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Category badge */
+.badge {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+/* Add to styles/globals.css or a CSS module */
+
+/* Smooth transitions */
+.document-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

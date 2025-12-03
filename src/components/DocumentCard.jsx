@@ -1,52 +1,57 @@
 'use client';
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function DocumentCard({ document, category }) {
-  const getCategoryIcon = (cat) => {
-    switch (cat) {
-      case 'notes': return '📝';
-      case 'books': return '📚';
-      case 'courses': return '🎓';
-      default: return '📄';
-    }
-  };
-
-  const getCategoryBadgeClass = (cat) => {
-    switch (cat) {
-      case 'notes': return 'badge-notes';
-      case 'books': return 'badge-books';
-      case 'courses': return 'badge-courses';
-      default: return 'bg-secondary';
-    }
-  };
+export default function DocumentCard({ document }) {
+  const category = document.category || document.subjectArea || "document";
 
   return (
-    <div className="col">
-      <div className="card custom-card card-hover h-100">
-        <div className="card-body">
-          <div className="d-flex justify-content-between align-items-start mb-3">
-            <span className={`badge ${getCategoryBadgeClass(category)} p-2`}>
-              <span className="me-1">{getCategoryIcon(category)}</span>
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </span>
+    <div className="card doc-card shadow-sm border-0 h-100">
+      
+      {/* Thumbnail */}
+      <div className="doc-thumb">
+        {document.thumbnailUrl ? (
+          <img
+            src={document.thumbnailUrl}
+            alt={document.title}
+            className="thumb-img"
+          />
+        ) : (
+          <div className="thumb-placeholder">
+            <i className="fas fa-file-pdf fs-1 text-muted"></i>
           </div>
-          
-          <h5 className="card-title fw-semibold mb-3 text-dark">
-            {document.title}
-          </h5>
-          
-          <p className="card-text text-muted mb-4">
-            {document.description}
-          </p>
-          
-          <Link 
-            href={`/${category}/${document.slug}`}
-            className="btn btn-link text-primary text-decoration-none p-0 fw-medium d-flex align-items-center"
+        )}
+      </div>
+
+      {/* Body */}
+      <div className="card-body d-flex flex-column">
+
+        {/* Category Badge */}
+        <span className="badge bg-primary mb-3">
+          {category.charAt(0).toUpperCase() + category.slice(1)}
+        </span>
+
+        <h5 className="card-title fw-bold text-dark mb-2">
+          {document.title}
+        </h5>
+
+        <p className="text-muted small flex-grow-1">
+          {document.description?.slice(0, 100)}...
+        </p>
+
+        {/* Bottom Section */}
+        <div className="d-flex justify-content-between align-items-center mt-3">
+          <small className="text-muted">
+            {document.pages ? `${document.pages} pages` : ""}
+          </small>
+
+          <Link
+            href={`/${document.subjectArea}/${document.slug}`}
+            className="btn btn-outline-primary btn-sm"
           >
-            View Document
-            <span className="ms-1">→</span>
+            View →
           </Link>
         </div>
+
       </div>
     </div>
   );
